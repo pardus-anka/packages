@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>theme-anka-xfce</Name>
+        <Homepage>http://code.google.com/p/anka-rattus/</Homepage>
+        <Packager>
+            <Name>Utku Berberoglu</Name>
+            <Email>utku.berber@gmail.com</Email>
+        </Packager>
+        <License>GPLv3+</License>
+        <PartOf>desktop.xfce.base</PartOf>
+        <IsA>data</IsA>
+        <Summary>A special window theme for Xfce on Pardus</Summary>
+        <Description>FİX ME!</Description>
+        <Archive sha1sum="46ef345a71176bb432400fe932d7a5e17bede9da" type="targz">/home/utku/Masaüstü/Anka-Xfce.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>theme-anka-xfce</Name>
+        <Files>
+            <Path fileType="all" permanent="0">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2012-08-27</Date>
+            <Version>1</Version>
+            <Comment>Siyahlaşma sorunu düzeltildi.</Comment>
+            <Name>Utku Berberoglu</Name>
+            <Email>utku.berber@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-08-26</Date>
+            <Version>1</Version>
+            <Comment>first release</Comment>
+            <Name>Utku Berberoglu</Name>
+            <Email>utku.berber@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

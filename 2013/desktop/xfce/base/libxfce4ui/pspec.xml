@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libxfce4ui</Name>
+        <Homepage>http://xfce.org</Homepage>
+        <Packager>
+            <Name>Alper Tekinalp</Name>
+            <Email>alper.tekinalp@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.xfce.base</PartOf>
+        <Summary>Xfce gui library</Summary>
+        <Description>libxfce4ui is a various GTK+ widgets for Xfce desktop environment.</Description>
+        <Archive sha1sum="3d8181cf9b06c7dd55588eb5bae7aa62edc1fdfb" type="tarbz2">http://archive.xfce.org/src/xfce/libxfce4ui/4.10/libxfce4ui-4.10.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency version="4.10.0">libxfce4util-devel</Dependency>
+            <Dependency version="4.10.0">xfconf-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>glade-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency version="4.10.0">xfce4-dev-tools</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">keyboard-shortcuts.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libxfce4ui</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency version="4.10.0">libxfce4util</Dependency>
+            <Dependency version="4.10.0">xfconf</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>startup-notification</Dependency>
+            <Dependency>glade</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+	    <Path fileType="data">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libxfce4ui-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libxfce4ui</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency version="4.10.0">xfconf-devel</Dependency>
+            <Dependency version="4.10.0">libxfce4util-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="5">
+            <Date>2012-08-26</Date>
+            <Version>4.10.0</Version>
+            <Comment>
+                *keyboard-shotcuts.patch added.
+            </Comment>
+            <Name>Utku Berberoğlu</Name>
+            <Email>utku.berber@gmail.com</Email>
+       </Update>
+       <Update release="4">
+            <Date>2012-05-02</Date>
+            <Version>4.10.0</Version>
+            <Comment>
+                *Version bump
+            </Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2012-01-03</Date>
+            <Version>4.8.1</Version>
+            <Comment>Fix Control shortcuts. See https://bugzilla.redhat.com/show_bug.cgi?id=768704 for more info</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2012-01-02</Date>
+            <Version>4.8.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Alper Tekinalp</Name>
+            <Email>alper.tekinalp@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-01-18</Date>
+            <Version>4.8.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Gökmen Görgen</Name>
+            <Email>gkmngrgn@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

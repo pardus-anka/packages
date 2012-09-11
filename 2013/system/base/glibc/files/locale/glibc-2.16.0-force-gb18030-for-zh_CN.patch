@@ -1,0 +1,17 @@
+--- a/localedata/SUPPORTED.zh_CN	2012-08-06 01:55:31.000000000 +0800
++++ b/localedata/SUPPORTED	2012-08-06 01:55:49.000000000 +0800
+@@ -426,12 +426,12 @@
+ zh_CN.GB18030/GB18030 \
+ zh_CN.GBK/GBK \
+ zh_CN.UTF-8/UTF-8 \
+-zh_CN/GB2312 \
++zh_CN/GB18030 \
+ zh_HK.UTF-8/UTF-8 \
+ zh_HK/BIG5-HKSCS \
+ zh_SG.UTF-8/UTF-8 \
+ zh_SG.GBK/GBK \
+-zh_SG/GB2312 \
++zh_SG/GB18030 \
+ zh_TW.EUC-TW/EUC-TW \
+ zh_TW.UTF-8/UTF-8 \
+ zh_TW/BIG5 \

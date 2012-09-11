@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>libcmis</Name>
+        <Homepage>http://sourceforge.net/projects/libcmis/</Homepage>
+        <Packager>
+            <Name>Ramazan Utku</Name>
+            <Email>ramazanutku@gmail.com</Email>
+        </Packager>
+        <License>GPL-2</License>
+        <PartOf>programming.misc</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>C++ client library for the CMIS interface</Summary>
+        <Description>C++ client library for the CMIS interface</Description>
+        <BuildDependencies>
+            <Dependency>cppunit-devel</Dependency>
+            <Dependency>docbook2x</Dependency>
+            <Dependency>pkgconfig</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="9cc8d29cc129d1aca1a1f24e799eebd6f2f1b93d" type="targz">mirrors://sourceforge/libcmis/libcmis-0.2.3.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>libcmis</Name>
+        <RuntimeDependencies>
+            <Dependency>boost</Dependency>
+            <Dependency>cppunit</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all" permanent="0">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-07-20</Date>
+            <Version>0.2.3</Version>
+            <Comment>First package</Comment>
+            <Name>Ramazan Utku</Name>
+            <Email>ramazanutku@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,42 @@
+diff -Nuar gettext-0.18.1.1.orig/gettext-runtime/gnulib-lib/stdio.in.h gettext-0.18.1.1/gettext-runtime/gnulib-lib/stdio.in.h
+--- gettext-0.18.1.1.orig/gettext-runtime/gnulib-lib/stdio.in.h 2012-09-05 02:52:05.174828396 +0000
++++ gettext-0.18.1.1/gettext-runtime/gnulib-lib/stdio.in.h      2012-09-05 02:53:50.690923432 +0000
+@@ -140,8 +140,10 @@
+ /* It is very rare that the developer ever has full control of stdin,
+    so any use of gets warrants an unconditional warning.  Assume it is
+    always declared, since it is required by C89.  */
++#if defined gets
+ #undef gets
+ _GL_WARN_ON_USE (gets, "gets is a security hole - use fgets instead");
++#endif
+ 
+ #if @GNULIB_FOPEN@
+ # if @REPLACE_FOPEN@
+diff -Nuar gettext-0.18.1.1.orig/gettext-tools/gnulib-lib/stdio.in.h gettext-0.18.1.1/gettext-tools/gnulib-lib/stdio.in.h
+--- gettext-0.18.1.1.orig/gettext-tools/gnulib-lib/stdio.in.h   2012-09-05 02:52:05.358160736 +0000
++++ gettext-0.18.1.1/gettext-tools/gnulib-lib/stdio.in.h        2012-09-05 02:53:45.704283780 +0000
+@@ -140,8 +140,10 @@
+ /* It is very rare that the developer ever has full control of stdin,
+    so any use of gets warrants an unconditional warning.  Assume it is
+    always declared, since it is required by C89.  */
++#if defined gets
+ #undef gets
+ _GL_WARN_ON_USE (gets, "gets is a security hole - use fgets instead");
++#endif
+ 
+ #if @GNULIB_FOPEN@
+ # if @REPLACE_FOPEN@
+diff -Nuar gettext-0.18.1.1.orig/gettext-tools/libgettextpo/stdio.in.h gettext-0.18.1.1/gettext-tools/libgettextpo/stdio.in.h
+--- gettext-0.18.1.1.orig/gettext-tools/libgettextpo/stdio.in.h 2012-09-05 02:52:05.211494864 +0000
++++ gettext-0.18.1.1/gettext-tools/libgettextpo/stdio.in.h      2012-09-05 02:53:52.007582966 +0000
+@@ -140,8 +140,10 @@
+ /* It is very rare that the developer ever has full control of stdin,
+    so any use of gets warrants an unconditional warning.  Assume it is
+    always declared, since it is required by C89.  */
++#if defined gets
+ #undef gets
+ _GL_WARN_ON_USE (gets, "gets is a security hole - use fgets instead");
++#endif
+ 
+ #if @GNULIB_FOPEN@
+ # if @REPLACE_FOPEN@

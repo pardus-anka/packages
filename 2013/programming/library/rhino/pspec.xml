@@ -1,0 +1,31 @@
+<PISI>
+    <Source>
+        <Name>rhino</Name>
+        <Homepage>http://www.mozilla.org/rhino/</Homepage>
+        <Packager>
+            <Name>Ramazan Utku</Name>
+            <Email>ramazanutku@gmail.com</Email>
+        </Packager>
+        <License>GPL2</License>
+        <PartOf>programming.language.java</PartOf>
+        <Summary>Open-source implementation of JavaScript written entirely in Java</Summary>
+        <Description>Open-source implementation of JavaScript written entirely in Java</Description>
+        <Archive sha1sum="81f39d6e24529d62b23a6a92a1a09af95495d7c1" type="zip">ftp://ftp.mozilla.org/pub/mozilla.org/js/rhino1_7R3.zip</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>rhino</Name>
+        <Files>
+            <Path fileType="library" permanent="0">/usr/share/java/js.jar</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-07-23</Date>
+            <Version>1.7</Version>
+            <Comment>First package</Comment>
+            <Name>Ramazan Utku</Name>
+            <Email>ramazanutku@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

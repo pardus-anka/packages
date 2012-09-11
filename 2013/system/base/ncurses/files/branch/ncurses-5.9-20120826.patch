@@ -1,0 +1,214 @@
+# ncurses 5.9 - patch 20120826 - Thomas E. Dickey
+#
+# ------------------------------------------------------------------------------
+#
+# Ncurses 5.9 is at
+# 	ftp.gnu.org:/pub/gnu
+#
+# Patches for ncurses 5.9 are in the subdirectory
+# 	ftp://invisible-island.net/ncurses/5.9
+#
+# ------------------------------------------------------------------------------
+# ftp://invisible-island.net/ncurses/5.9/ncurses-5.9-20120826.patch.gz
+# patch by Thomas E. Dickey <dickey@invisible-island.net>
+# created  Mon Aug 27 01:13:03 UTC 2012
+# ------------------------------------------------------------------------------
+# NEWS                        |    9 ++++++++-
+# aclocal.m4                  |    6 +++---
+# configure                   |   10 +++++-----
+# dist.mk                     |    4 ++--
+# ncurses/base/lib_set_term.c |    4 ++--
+# ncurses/tinfo/db_iterator.c |    2 +-
+# package/debian/changelog    |    4 ++--
+# package/ncurses.spec        |    2 +-
+# 8 files changed, 24 insertions(+), 17 deletions(-)
+# ------------------------------------------------------------------------------
+Index: NEWS
+Prereq:  1.1943 
+--- ncurses-5.9-20120825+/NEWS	2012-08-25 20:02:00.000000000 +0000
++++ ncurses-5.9-20120826/NEWS	2012-08-26 21:12:55.000000000 +0000
+@@ -25,7 +25,7 @@
+ -- sale, use or other dealings in this Software without prior written        --
+ -- authorization.                                                            --
+ -------------------------------------------------------------------------------
+--- $Id: NEWS,v 1.1943 2012/08/25 20:02:00 tom Exp $
++-- $Id: NEWS,v 1.1945 2012/08/26 21:12:55 tom Exp $
+ -------------------------------------------------------------------------------
+ 
+ This is a log of changes that ncurses has gone through since Zeyd started
+@@ -45,6 +45,13 @@
+ Changes through 1.9.9e did not credit all contributions;
+ it is not possible to add this information.
+ 
++20120826
++	+ increase size of ncurses' output-buffer, in case of very small
++	  initial screen-sizes.
++	+ fix evaluation of TERMINFO and TERMINFO_DIRS default values as needed
++	  after changes to use --datarootdir (reports by Gabriele Balducci,
++	  Roumen Petrov).
++
+ 20120825
+ 	+ change output buffering scheme, using buffer maintained by ncurses
+ 	  rather than stdio, to avoid problems with SIGTSTP handling (report
+Index: aclocal.m4
+Prereq:  1.621 
+--- ncurses-5.9-20120825+/aclocal.m4	2012-08-11 23:36:44.000000000 +0000
++++ ncurses-5.9-20120826/aclocal.m4	2012-08-26 14:01:23.000000000 +0000
+@@ -28,7 +28,7 @@
+ dnl
+ dnl Author: Thomas E. Dickey 1995-on
+ dnl
+-dnl $Id: aclocal.m4,v 1.621 2012/08/11 23:36:44 tom Exp $
++dnl $Id: aclocal.m4,v 1.622 2012/08/26 14:01:23 tom Exp $
+ dnl Macros used in NCURSES auto-configuration script.
+ dnl
+ dnl These macros are maintained separately from NCURSES.  The copyright on
+@@ -6838,7 +6838,7 @@
+ if ifelse([$5],,true,[test -n "$5"]) ; then
+ CF_PATH_SYNTAX(withval)
+ fi
+-$3="$withval"
++eval $3="$withval"
+ AC_SUBST($3)dnl
+ ])dnl
+ dnl ---------------------------------------------------------------------------
+@@ -6879,7 +6879,7 @@
+ cf_dst_path=`echo "$cf_dst_path" | sed -e 's/\\\\/\\\\\\\\/g'`
+ ])
+ 
+-eval '$3="$cf_dst_path"'
++eval $3="$cf_dst_path"
+ AC_SUBST($3)dnl
+ 
+ ])dnl
+Index: configure
+--- ncurses-5.9-20120825+/configure	2012-08-11 21:46:25.000000000 +0000
++++ ncurses-5.9-20120826/configure	2012-08-26 14:01:27.000000000 +0000
+@@ -6385,7 +6385,7 @@
+ done
+ IFS="$ac_save_ifs"
+ 
+-eval 'TERMINFO_DIRS="$cf_dst_path"'
++eval TERMINFO_DIRS="$cf_dst_path"
+ 
+ echo "$as_me:6390: result: $TERMINFO_DIRS" >&5
+ echo "${ECHO_T}$TERMINFO_DIRS" >&6
+@@ -6436,7 +6436,7 @@
+ esac
+ 
+ fi
+-TERMINFO="$withval"
++eval TERMINFO="$withval"
+ 
+ echo "$as_me:6441: result: $TERMINFO" >&5
+ echo "${ECHO_T}$TERMINFO" >&6
+@@ -6622,7 +6622,7 @@
+ done
+ IFS="$ac_save_ifs"
+ 
+-eval 'TERMPATH="$cf_dst_path"'
++eval TERMPATH="$cf_dst_path"
+ 
+ echo "$as_me:6627: result: $TERMPATH" >&5
+ echo "${ECHO_T}$TERMPATH" >&6
+@@ -19667,7 +19667,7 @@
+ esac
+ 
+ fi
+-ADA_INCLUDE="$withval"
++eval ADA_INCLUDE="$withval"
+ 
+ echo "$as_me:19672: result: $ADA_INCLUDE" >&5
+ echo "${ECHO_T}$ADA_INCLUDE" >&6
+@@ -19715,7 +19715,7 @@
+ esac
+ 
+ fi
+-ADA_OBJECTS="$withval"
++eval ADA_OBJECTS="$withval"
+ 
+ echo "$as_me:19720: result: $ADA_OBJECTS" >&5
+ echo "${ECHO_T}$ADA_OBJECTS" >&6
+Index: dist.mk
+Prereq:  1.887 
+--- ncurses-5.9-20120825+/dist.mk	2012-08-25 16:47:15.000000000 +0000
++++ ncurses-5.9-20120826/dist.mk	2012-08-26 13:32:39.000000000 +0000
+@@ -25,7 +25,7 @@
+ # use or other dealings in this Software without prior written               #
+ # authorization.                                                             #
+ ##############################################################################
+-# $Id: dist.mk,v 1.887 2012/08/25 16:47:15 tom Exp $
++# $Id: dist.mk,v 1.888 2012/08/26 13:32:39 tom Exp $
+ # Makefile for creating ncurses distributions.
+ #
+ # This only needs to be used directly as a makefile by developers, but
+@@ -37,7 +37,7 @@
+ # These define the major/minor/patch versions of ncurses.
+ NCURSES_MAJOR = 5
+ NCURSES_MINOR = 9
+-NCURSES_PATCH = 20120825
++NCURSES_PATCH = 20120826
+ 
+ # We don't append the patch to the version, since this only applies to releases
+ VERSION = $(NCURSES_MAJOR).$(NCURSES_MINOR)
+Index: ncurses/base/lib_set_term.c
+Prereq:  1.143 
+--- ncurses-5.9-20120825+/ncurses/base/lib_set_term.c	2012-08-25 20:10:40.000000000 +0000
++++ ncurses-5.9-20120826/ncurses/base/lib_set_term.c	2012-08-26 21:11:49.000000000 +0000
+@@ -47,7 +47,7 @@
+ #define CUR SP_TERMTYPE
+ #endif
+ 
+-MODULE_ID("$Id: lib_set_term.c,v 1.143 2012/08/25 20:10:40 tom Exp $")
++MODULE_ID("$Id: lib_set_term.c,v 1.144 2012/08/26 21:11:49 tom Exp $")
+ 
+ #ifdef USE_TERM_DRIVER
+ #define MaxColors      InfoOf(sp).maxcolors
+@@ -376,7 +376,7 @@
+     fflush(output);
+     sp->_ofd = output ? fileno(output) : -1;
+     sp->_ofp = output;
+-    sp->out_limit = (size_t) (slines * scolumns);
++    sp->out_limit = (size_t) ((2 + slines) * (6 + scolumns));
+     if ((sp->out_buffer = malloc(sp->out_limit)) == 0)
+ 	sp->out_limit = 0;
+     sp->out_inuse = 0;
+Index: ncurses/tinfo/db_iterator.c
+Prereq:  1.34 
+--- ncurses-5.9-20120825+/ncurses/tinfo/db_iterator.c	2012-08-25 21:55:00.000000000 +0000
++++ ncurses-5.9-20120826/ncurses/tinfo/db_iterator.c	2012-08-25 21:55:00.000000000 +0000
+@@ -43,7 +43,7 @@
+ #include <hashed_db.h>
+ #endif
+ 
+-MODULE_ID("$Id: db_iterator.c,v 1.34 2012/06/30 16:30:10 tom Exp $")
++MODULE_ID("$Id: db_iterator.c,v 1.35 2012/08/25 21:55:00 tom Exp $")
+ 
+ #define HaveTicDirectory _nc_globals.have_tic_directory
+ #define KeepTicDirectory _nc_globals.keep_tic_directory
+Index: package/debian/changelog
+--- ncurses-5.9-20120825+/package/debian/changelog	2012-08-25 20:50:00.000000000 +0000
++++ ncurses-5.9-20120826/package/debian/changelog	2012-08-26 13:34:51.000000000 +0000
+@@ -1,8 +1,8 @@
+-ncurses6 (5.9-20120825) unstable; urgency=low
++ncurses6 (5.9-20120826) unstable; urgency=low
+ 
+   * latest weekly patch
+ 
+- -- Thomas E. Dickey <dickey@invisible-island.net>  Sat, 25 Aug 2012 16:49:58 -0400
++ -- Thomas E. Dickey <dickey@invisible-island.net>  Sun, 26 Aug 2012 09:34:48 -0400
+ 
+ ncurses6 (5.9-20120608) unstable; urgency=low
+ 
+Index: package/ncurses.spec
+--- ncurses-5.9-20120825+/package/ncurses.spec	2012-08-25 20:49:38.000000000 +0000
++++ ncurses-5.9-20120826/package/ncurses.spec	2012-08-26 13:34:51.000000000 +0000
+@@ -1,7 +1,7 @@
+ Summary: shared libraries for terminal handling
+ Name: ncurses6
+ Release: 5.9
+-Version: 20120825
++Version: 20120826
+ License: X11
+ Group: Development/Libraries
+ Source: ncurses-%{release}-%{version}.tgz

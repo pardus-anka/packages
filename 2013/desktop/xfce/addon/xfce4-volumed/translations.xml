@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xfce4-volumed</Name>
+        <Summary xml:lang="en">A volume keys control daemon for Xfce.</Summary>
+        <Description xml:lang="en">Basic daemon enabling the XF86 Volume keys and supporting synchronous volume notifications.</Description>
+    </Source>
+</PISI>

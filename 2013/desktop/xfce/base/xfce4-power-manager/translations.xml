@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xfce4-power-manager</Name>
+        <Summary xml:lang="tr">Xfce masaüstü için bir güç yöneticisi</Summary>
+        <Description xml:lang="tr">Xfce güç yöneticisi, kendi güç tüketimini azaltmak için bilgisayar güç kaynakları ve kontrol edilebilir aygıtları yönetir.(LCD parlaklık seviyesi, monitör uyku, CPU frekansı ölçekleme gibi)</Description>
+    </Source>
+</PISI>
