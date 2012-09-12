@@ -65,13 +65,6 @@
     </Package>
 
     <History>
-        <Update release="15">
-            <Date>2012-08-23</Date>
-            <Version>2.19</Version>
-            <Comment>v.bump</Comment>
-            <Name>Osman Erkan</Name>
-            <Email>namso-01@hotmail.it</Email>
-        </Update>
         <Update release="14">
             <Date>2011-03-02</Date>
             <Version>2.19</Version>
