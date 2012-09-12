@@ -18,15 +18,11 @@
             <Dependency>gettext</Dependency>
             <Dependency>patch</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch level="1">bison-1.32-extfix.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
         <Name>bison</Name>
         <RuntimeDependencies>
-	  <!-- m4 1.4.16 required?-->
             <Dependency>m4</Dependency>
             <Dependency>gettext</Dependency>
         </RuntimeDependencies>
@@ -45,19 +41,12 @@
     </Package>
 
     <History>
-      <Update release="8">
-            <Date>2012-08-13</Date>
+		<Update release="7">
+            <Date>2012-09-05</Date>
             <Version>2.6.2</Version>
-            <Comment>New toolchain.</Comment>
-            <Name>Ramazan Utku</Name>
-            <Email>ramazanutku@gmail.com</Email>
-        </Update>
-        <Update release="7">
-            <Date>2012-07-12</Date>
-            <Version>2.5</Version>
-            <Comment>New toolchain.</Comment>
-            <Name>Serdar Soytetir</Name>
-            <Email>tulliana@gmail.com</Email>
+            <Comment>Version bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="6">
             <Date>2010-10-11</Date>

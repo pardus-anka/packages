@@ -1,0 +1,17 @@
+diff -Naurp Python-2.7.2/configure.in Python-2.7.2.oden/configure.in
+--- Python-2.7.2/configure.in	2012-06-19 11:47:59.000000000 +0000
++++ Python-2.7.2.oden/configure.in	2012-06-19 11:48:40.000000000 +0000
+@@ -2180,6 +2180,13 @@ else
+ fi])
+ AC_MSG_RESULT($with_dbmliborder)
+ 
++dnl Verify that XML_SetHashSalt is present in the expat library
++dnl We use AC_CHECK_LIB rather than AC_SEARCH_LIBS, and provide a non-empty
++dnl action-if-found to avoid -lexpat being added to LIBS= in the Makefile:
++AC_CHECK_LIB([expat], [XML_SetHashSalt],
++             [AC_MSG_RESULT(found)],
++             [AC_MSG_ERROR([XML_SetHashSalt not found])])
++
+ # Determine if signalmodule should be used.
+ AC_SUBST(USE_SIGNAL_MODULE)
+ AC_SUBST(SIGNAL_OBJS)

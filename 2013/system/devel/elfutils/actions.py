@@ -17,19 +17,20 @@ def setup():
     # Remove -Wall from default flags. The makefiles enable enough warnings
     # themselves, and they use -Werror.
     shelltools.export("CFLAGS", get.CFLAGS().replace("-Wall", ""))
+    shelltools.export("CFLAGS", "%s -g" % get.CFLAGS())
 
     autotools.configure("--program-prefix=\"eu-\" \
                          --enable-thread-safety \
                          --disable-nls \
                          --with-zlib \
-                         --with-bzlib")
-                         # --with-lzma \
+                         --with-bzlib \
+                         --with-lzma")
 
 def build():
     autotools.make()
 
-#def check():
-    #autotools.make("check")
+def check():
+    autotools.make("check")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

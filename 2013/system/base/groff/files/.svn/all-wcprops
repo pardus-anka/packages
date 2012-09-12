@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pardus/!svn/ver/1238/playground/COMMON/system/base/groff/files
+END
+man-unicode-dashes.patch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/1238/playground/COMMON/system/base/groff/files/man-unicode-dashes.patch
+END
+pardus.patch
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/pardus/!svn/ver/1238/playground/COMMON/system/base/groff/files/pardus.patch
+END

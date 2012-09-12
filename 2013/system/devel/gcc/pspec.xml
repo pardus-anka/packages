@@ -29,8 +29,9 @@
             <Dependency>mpfr</Dependency>
             <Dependency>libmpc</Dependency>
             <Dependency>ppl</Dependency>
-            <Dependency>cloog</Dependency>
+            <Dependency>cloog-ppl</Dependency>
             <Dependency>elfutils</Dependency>
+            <Dependency>glibc-32bit</Dependency>
         </BuildDependencies>
         <Patches> 
             <!-- Fix paths in 64bit -->
@@ -71,10 +72,10 @@
             <Patch level="1">gentoo/11_all_default-warn-format-security.patch</Patch>
             <Patch level="1">gentoo/12_all_default-warn-trampolines.patch</Patch>
             <Patch level="1">gentoo/15_all_libgomp-Werror.patch</Patch>
-	    <Patch level="1">gentoo/90_all_100-uclibc-conf.patch</Patch>
-	    <Patch level="1">gentoo/90_all_301-missing-execinfo_h.patch</Patch>
-	    <Patch level="1">gentoo/90_all_302-c99-snprintf.patch</Patch>
-	    <Patch level="1">gentoo/90_all_305-libmudflap-susv3-legacy.patch</Patch>
+            <Patch level="1">gentoo/90_all_100-uclibc-conf.patch</Patch>
+            <Patch level="1">gentoo/90_all_301-missing-execinfo_h.patch</Patch>
+            <Patch level="1">gentoo/90_all_302-c99-snprintf.patch</Patch>
+            <Patch level="1">gentoo/90_all_305-libmudflap-susv3-legacy.patch</Patch>
             <!-- upstream merged the patch, check again 
             <Patch>pr42375.patch</Patch>  -->
 
@@ -168,6 +169,7 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/gfilt">gfilt</AdditionalFile>

@@ -12,62 +12,38 @@
         <IsA>app:console</IsA>
         <Summary>Assembler and linker tools</Summary>
         <Description>Contains commands like as, ld, nm, objdump, ar, ranlib for compiling assembly code to the machine language, and for linking and manipulating the binary object files.</Description>
-        <Archive sha1sum="8746b3c9abf84dbb03903b638f60d24a772b8558" type="tarbz2">http://mirrors.kernel.org/archlinux/other/binutils/binutils-2.22_20120323.tar.bz2</Archive>
+        <Archive sha1sum="e1f2a319ee645fd2cf80091ac204af84a8dae5ec" type="tarxz">http://www.kernel.org/pub/linux/devel/binutils/binutils-2.23.51.0.1.tar.xz</Archive>
         <Patches>
-            <!-- Install 32bit libs into /lib32 in an ABI setup with amd64/x86-->
-	    <!--<Patch level="1">gentoo/65_all_binutils-2.20-amd64-32bit-path.patch</Patch>-->
             <!-- Enable dtags -->
-	    <!--<Patch level="1">ld-dtags.diff</Patch>-->
-
-            <!-- Skip RPATHS if env set -->
-            <!--
-            <Patch>binutils-skip-rpaths.patch</Patch>
-            -->
-
-            <!-- Force as-needed at linker level when PARDUS_ASNEEDED is set, note Bsymbolic also enables as-needed so this may not be necessary -->
-            <!--
-            <Patch level="1">binutils-build-as-needed.diff</Patch>
-            -->
-
-            <!--Patch>unit-at-a-time.patch</Patch-->
-
+            <Patch level="1">ld-dtags.diff</Patch>
+            <Patch>unit-at-a-time.patch</Patch>
             <!-- Enable -z relro globally, see http://people.redhat.com/drepper/nonselsec.pdf -->
-	    <!--<Patch>ld-relro.diff</Patch>-->
+            <Patch>ld-relro.diff</Patch>
 
             <!-- Warn for text relocations, see http://people.redhat.com/drepper/textrelocs.html -->
-            <!--Patch level="1">warn-textrel.patch</Patch-->
+            <Patch level="1">warn-textrel.patch</Patch>
 
             <!-- switch to hashtype=both by default -->
-	    <!--<Patch>ld-hashtype-both.patch</Patch>-->
-
+            <Patch>ld-hashtype-both.patch</Patch>
+            
             <!-- Build libbfd.so and libopcodes.so with -Bsymbolic-functions if possible
             Patch generated with
             sed -i -e 's/^libbfd_la_LDFLAGS = /&-Wl,-Bsymbolic-functions /' bfd/Makefile.{am,in}
             sed -i -e 's/^libopcodes_la_LDFLAGS = /&-Wl,-Bsymbolic-functions /' opcodes/Makefile.{am,in}
             -->
-	      <!--<Patch level="1">Bsymbolic-functions.patch</Patch>-->
-
-            <!-- LTP sux but we already started this way, make sure this change does not break anything, or wait for next release
-            perl -pi -e 's/i\[3-7\]86/i[34567]86/g' */conf*
-            sed -i -e 's/%''{release}/%{release}/g' bfd/Makefile{.am,.in}
-            sed -i -e '/^libopcodes_la_\(DEPENDENCIES\|LIBADD\)/s,$, ../bfd/libbfd.la,' opcodes/Makefile.{am,in}
-            <Patch level="1">remove_bfd.patch</Patch>
-            -->
-
-            <!--Patch level="1">binutils-discarded.patch</Patch-->
+            <Patch level="1">Bsymbolic-functions.patch</Patch>
+            
+            <Patch level="1">binutils-discarded.patch</Patch>
             <!-- fix libtool in binutils -->
-	    <!--<Patch level="1">binutils-libtool-m.patch</Patch>-->
-	      <!--<Patch level="1">binutils-libtool-relink.patch</Patch>-->
-
-
-            <!-- Set libsuffix to 64 -->
-            <!-- use it if we dont go for pure64 : now we go pure64 so disable it -->
-            <!--Patch>x86-64-biarch.patch</Patch-->
-
-
+            <Patch level="1">binutils-libtool-m.patch</Patch>
+            <Patch level="1">binutils-libtool-relink.patch</Patch>
+            
             <!-- Fix test suites -->
-	    <!--<Patch>testsuite.diff</Patch>-->
-	      <!--<Patch>fixup-testcase-perturb.diff</Patch>-->
+            <Patch>testsuite.diff</Patch>
+            <Patch>fixup-testcase-perturb.diff</Patch>
+
+            <Patch>binutils-2.23.51.0.1-gold-keep.patch</Patch>
+
         </Patches>
     </Source>
 
@@ -76,7 +52,6 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
-	    <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="info">/usr/share/info</Path>
             <Path fileType="man">/usr/share/man</Path>
@@ -84,16 +59,16 @@
     </Package>
 
     <History>
-      <Update release="42">
-            <Date>2012-08-13</Date>
-            <Version>2.22_20120323</Version>
-            <Comment>New toolchain.</Comment>
-            <Name>Ramazan Utku</Name>
-            <Email>ramazanutku@gmail.com</Email>
+        <Update release="42">
+            <Date>2012-08-26</Date>
+            <Version>2.23.51.0.1</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="41">
-            <Date>2012-07-22</Date>
-            <Version>2.22.52.0.4</Version>
+            <Date>2012-08-07</Date>
+            <Version>2.22</Version>
             <Comment>New toolchain.</Comment>
             <Name>Serdar Soytetir</Name>
             <Email>tulliana@gmail.com</Email>

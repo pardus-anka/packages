@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files
+END
+make-3.82-err-reporting.patch
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-err-reporting.patch
+END
+make-3.82-weird-shell.patch
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-weird-shell.patch
+END
+make-3.80-gfortran.patch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.80-gfortran.patch
+END
+make-3.82-archives-many-objs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-archives-many-objs.patch
+END
+make-3.82-jobserver.patch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-jobserver.patch
+END
+make-bug-30723.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-bug-30723.patch
+END
+make-3.82-newlines.patch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-newlines.patch
+END
+make-3.82-noclock_gettime.patch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-noclock_gettime.patch
+END
+make-3.82-j8k.patch
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-j8k.patch
+END
+make-3.82-getcwd.patch
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/make/files/make-3.82-getcwd.patch
+END

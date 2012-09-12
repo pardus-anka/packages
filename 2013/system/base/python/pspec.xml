@@ -12,12 +12,12 @@
         <IsA>app:console</IsA>
         <Summary>An interpreted, interactive, object-orientated programming language</Summary>
         <Description>Python is a dynamic object-oriented programming language that can be used for many kinds of software development. It offers strong support for integration with other languages and tools, comes with extensive standard libraries, and can be learned in a few days.</Description>
-        <Archive sha1sum="417bdeea77abfaf1b9257fc6b4a04aaa209f4547" type="tarbz2">http://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2</Archive>
+        <Archive sha1sum="b2b0ada7ebed4a8204a855193afbdb3aa3308357" type="tarlzma">http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency versionFrom="1.1.3">zlib-devel</Dependency>
             <Dependency versionFrom="5.2">ncurses-devel</Dependency>
             <Dependency versionFrom="4.1">readline-devel</Dependency>
-            <Dependency>db4-devel</Dependency>
+            <Dependency>db5-devel</Dependency>
             <Dependency>gdbm-devel</Dependency>
             <!-- check whether bzip2 is splitted to devel or not!! -->
             <Dependency>bzip2</Dependency>
@@ -35,12 +35,10 @@
             <Patch>add-pardus-to-search-path.patch</Patch>
 
             <!-- Don't create pyc files on installation -->
-            <Patch>no-pyc.patch</Patch>
+            <Patch level="1">no-pyc.patch</Patch>
 
             <!-- Use UTF-8 by default -->
             <Patch>default-utf8.patch</Patch>
-
-            <!-- Fedora/Mandriva patches -->
 
             <!-- Add missing constants to socket module -->
             <Patch level="1">python-2.7rc1-socketmodule-constants.patch</Patch>
@@ -56,12 +54,10 @@
             <Patch level="1">sqlite-encoding.patch</Patch>
 
             <!-- some Turkish locale fixes, usually caused by tolower() -->
-            <Patch level="1">python-2.5.1-codec-ascii-tolower.patch</Patch>
             <Patch level="1">trfix_emaillib.patch</Patch>
 
             <!-- Other gentoo patches -->
-            <Patch level="1">gentoo/18_all_distutils-cxxflags.patch</Patch>
-            <Patch level="1">gentoo/21_all_ctypes-execstack.patch</Patch>
+            <Patch>gentoo/21_all_distutils_c++.patch</Patch>
 
             <!-- Use -lpthread rather than -pthread -->
             <Patch level="1">python-2.7-revised-linkage.patch</Patch>
@@ -79,6 +75,15 @@
             <!-- Add multiple stream support to bz2 module. This is needed to uncompress
             multiple streams like pbzip2 compressed tarballs, etc. This is fixed in Python >= 3.3 -->
             <Patch level="0">bz2-multiple-stream-support-issue1625.patch</Patch>
+            
+            <!-- Don't include /usr/local/* in search path -->
+            <Patch level="0">Python-2.7.2-no-local-incpath.patch</Patch>
+            
+            <!-- Fix CVE-2011-4944 -->
+            <Patch level="1">python-2.7.3-upstream-pypirc-secure.patch</Patch>
+            
+            <!-- skip semaphore test, as it requires /dev/shm -->
+            <Patch level="1">python-2.7.1-skip-shm-test.patch</Patch>
         </Patches>
     </Source>
 
@@ -88,7 +93,7 @@
             <Dependency versionFrom="1.1.3">zlib</Dependency>
             <Dependency versionFrom="5.2">ncurses</Dependency>
             <Dependency versionFrom="4.1">readline</Dependency>
-            <Dependency>db4</Dependency>
+            <Dependency>db5</Dependency>
             <Dependency>gdbm</Dependency>
             <Dependency>bzip2</Dependency>
             <Dependency>sqlite</Dependency>
@@ -170,6 +175,13 @@
     </Package>
 
     <History>
+        <Update release="71" type="security">
+            <Date>2012-07-11</Date>
+            <Version>2.7.3</Version>
+            <Comment>New stable release</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
+        </Update>
         <Update release="70">
             <Date>2011-09-16</Date>
             <Version>2.7.2</Version>

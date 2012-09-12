@@ -1,0 +1,17 @@
+---
+ Modules/_ctypes/libffi/fficonfig.py.in |    2 	1 +	1 -	0 !
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Index: Python-2.7.1/Modules/_ctypes/libffi/fficonfig.py.in
+===================================================================
+--- Python-2.7.1.orig/Modules/_ctypes/libffi/fficonfig.py.in
++++ Python-2.7.1/Modules/_ctypes/libffi/fficonfig.py.in
+@@ -6,7 +6,7 @@ src/dlmalloc.c
+ 
+ ffi_platforms = {
+     'MIPS_IRIX': ['src/mips/ffi.c', 'src/mips/o32.S', 'src/mips/n32.S'],
+-    'MIPS_LINUX': ['src/mips/ffi.c', 'src/mips/o32.S'],
++    'MIPS': ['src/mips/ffi.c', 'src/mips/o32.S'],
+     'X86': ['src/x86/ffi.c', 'src/x86/sysv.S'],
+     'X86_FREEBSD': ['src/x86/ffi.c', 'src/x86/freebsd.S'],
+     'X86_WIN32': ['src/x86/ffi.c', 'src/x86/win32.S'],

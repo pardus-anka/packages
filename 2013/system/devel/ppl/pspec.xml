@@ -13,18 +13,12 @@
         <IsA>library</IsA>
         <Summary>Pharma Polyhedra library</Summary>
         <Description>ppl is the Parma Polyhedra Library that provides numerical abstractions for analysis of complex systems.</Description>
-        <Archive sha1sum="24cd8997f8383ff21da2e705e55969b48dc81425" type="tarbz2">http://bugseng.com/products/ppl/download/ftp/releases/1.0/ppl-1.0.tar.bz2</Archive>
+        <Archive sha1sum="f5be29fe0c2a17090ba6232f0e90b5c8e65bebb9" type="tarxz">http://bugseng.com/products/ppl/download/ftp/releases/1.0/ppl-1.0.tar.xz</Archive>
         <BuildDependencies>
-            <!-- gmp with cxx support is needed -->
             <Dependency>gmp-devel</Dependency>
             <Dependency>glpk-devel</Dependency>
             <Dependency>m4</Dependency>
         </BuildDependencies>
-        <!--
-        <Patches>
-            <Patch level="1">ppl-0.10.2-gmp-5-fix.patch</Patch>
-        </Patches>
-        -->
     </Source>
 
     <Package>
@@ -73,11 +67,11 @@
 
     <History>
         <Update release="7">
-            <Date>2012-07-13</Date>
+            <Date>2012-09-05</Date>
             <Version>1.0</Version>
-            <Comment>New toolchain</Comment>
-            <Name>Serdar Soytetir</Name>
-            <Email>tulliana@gmail.com</Email>
+            <Comment>Major version bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="6">
             <Date>2011-02-27</Date>

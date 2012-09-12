@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/autoconf/files
+END
+autoconf-2.64-drop-failing-parallel-test.patch
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/autoconf/files/autoconf-2.64-drop-failing-parallel-test.patch
+END
+help2man.patch
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/autoconf/files/help2man.patch
+END
+autoconf-2.62-fix-multiline-string.patch
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/autoconf/files/autoconf-2.62-fix-multiline-string.patch
+END

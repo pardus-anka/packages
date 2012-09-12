@@ -55,11 +55,10 @@ def setup():
     # Maintainer mode off, do not force recreation of generated files
     #shelltools.system("contrib/gcc_update --touch")
 
-    shelltools.cd("../")
     shelltools.makedirs("build")
     shelltools.cd("build")
 
-    shelltools.system('.././gcc-%s/configure \
+    shelltools.system('../configure \
                        --prefix=/usr \
                        --bindir=/usr/bin \
                        --libdir=/usr/lib \
@@ -93,23 +92,17 @@ def setup():
                        --with-system-zlib \
                        --with-tune=generic \
                        --with-pkgversion="Pardus Linux" \
-                       --with-bugurl=http://bugs.pardus.org.tr' % ( verMajor , get.HOST(), opt_arch, opt_unwind, opt_multilib))
-                       # FIXME: this is supposed to be detected automatically
-                       #--enable-long-long \
-                       # --enable-gnu-unique-object \  enable with binutils > 2.20.51.0.2
-                       # --disable-libunwind-exceptions  # experiment with libunwind >= 0.99
-
+                       --with-bugurl=http://bugs.pardus.org.tr' % (get.HOST(), opt_arch, opt_unwind, opt_multilib))
 
 def build():
     exportFlags()
 
-    shelltools.cd("../build")
+    shelltools.cd("build")
     autotools.make('BOOT_CFLAGS="%s" profiledbootstrap' % cflags)
 
 def install():
-    shelltools.cd("../build")
-    #autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    autotools.install()
+    shelltools.cd("build")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     for header in ["limits.h","syslimits.h"]:
         pisitools.insinto("/usr/lib/gcc/%s/%s/include" % (get.HOST(), verMajor) , "gcc/include-fixed/%s" % header)

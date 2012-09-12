@@ -19,14 +19,13 @@ def setup():
                          --disable-optimization \
                          --docdir="/%s/%s" \
                          --enable-shared \
-                         --enable-interfaces="c cxx" \
+                         --enable-interfaces="c,cxx" \
                          --with-pic' % (get.docDIR(), get.srcNAME()))
 def build():
     autotools.make()
 
-# tests run hours and hours, running it is left to packager
-#def check():
-#    autotools.make("check")
+#~ def check():
+    #~ autotools.make("check")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

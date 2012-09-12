@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/pardus/!svn/ver/1384/playground/COMMON/system/base/groff
+END
+translations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/pardus/!svn/ver/1238/playground/COMMON/system/base/groff/translations.xml
+END
+actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pardus/!svn/ver/1238/playground/COMMON/system/base/groff/actions.py
+END
+pspec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pardus/!svn/ver/1384/playground/COMMON/system/base/groff/pspec.xml
+END

@@ -1,0 +1,21 @@
+--- configure.in.orig	2010-11-29 04:27:57.000000000 +0000
++++ configure.in	2010-11-29 04:29:21.000000000 +0000
+@@ -7,12 +7,12 @@
+ 
+ dnl Some m4 magic to ensure that the configure script is generated
+ dnl by the correct autoconf version.
+-m4_define([version_required],
+-[m4_if(m4_version_compare(m4_defn([m4_PACKAGE_VERSION]), [$1]), 0,
+-       [],
+-       [m4_fatal([Autoconf version $1 is required for Python], 63)])
+-])
+-version_required(2.65)
++dnl m4_define([version_required],
++dnl [m4_if(m4_version_compare(m4_defn([m4_PACKAGE_VERSION]), [$1]), 0,
++dnl       [],
++dnl       [m4_fatal([Autoconf version $1 is required for Python], 63)])
++dnl ])
++dnl version_required(2.65)
+ 
+ AC_REVISION($Revision: 86076 $)
+ AC_INIT(python, PYTHON_VERSION, http://bugs.python.org/)

@@ -36,12 +36,12 @@
     </Package>
 
     <History>
-      <Update release="8">
-            <Date>2012-08-16</Date>
+        <Update release="8">
+            <Date>2012-09-05</Date>
             <Version>4.47</Version>
             <Comment>Version bump</Comment>
-            <Name>Ramazan Utku</Name>
-            <Email>ramazanutku@gmail.com</Email>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="7">
             <Date>2010-10-11</Date>

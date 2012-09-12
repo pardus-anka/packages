@@ -17,6 +17,7 @@
         <Patches>
             <Patch level="1">elfutils-portability.patch</Patch>
             <Patch level="1">elfutils-robustify.patch</Patch>
+            <Patch level="1">elfutils-0.154-binutils-pr-ld-13621.patch</Patch>
         </Patches>
     </Source>
 
@@ -32,11 +33,11 @@
 
     <History>
         <Update release="13">
-            <Date>2012-07-30</Date>
+            <Date>2012-09-05</Date>
             <Version>0.154</Version>
-            <Comment>New toolchain</Comment>
-            <Name>Serdar Soytetir</Name>
-            <Email>tulliana@gmail.com</Email>
+            <Comment>Version bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="12">
             <Date>2010-10-11</Date>

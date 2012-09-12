@@ -7,13 +7,12 @@
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
     autotools.configure("--disable-static")
 
 def build():
-    autotools.make("CFLAGS=-O2 LDFLAGS=-s")
+    autotools.make()
 
 def install():
     autotools.install()

@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
 # Copyright 2005-2010 TUBITAK/UEKAE
@@ -12,29 +12,27 @@ from pisi.actionsapi import get
 
 # linker = "gold"
 linker = "ld"
-multilib = "--enable-multilib" if get.ARCH() == "x86_64" else ""
-
-WorkDir = "binutils"
+multilib = "--enable-multilib --enable-64-bit-bfd" if get.ARCH() == "x86_64" else ""
 
 def setup():
     # Build binutils with LD_SYMBOLIC_FUNCTIONS=1 and reduce PLT relocations in libfd.so by 84%.
-   
-    #shelltools.export("LD_SYMBOLIC_FUNCTIONS", "1")
+    shelltools.export("LD_SYMBOLIC_FUNCTIONS", "1")
 
     autotools.configure('--enable-shared \
-			 --prefix=/usr \
-			 --with-lib-path=/usr/lib:/usr/local/lib \
-			 --enable-ld=default \
+                         --build=%s \
+                         --enable-ld=default \
                          --enable-gold \
                          --enable-plugins \
                          --enable-threads \
-                         --enable-64-bit-bfd\
-                         --enable-shared \
-                         --enable-multilib \
-                         --enable-ld=default \
+                         --with-default-linker=%s \
                          --with-pkgversion="Pardus Linux" \
                          --with-bugurl=http://bugs.pardus.org.tr/ \
-                         --with-separate-debug-dir=/usr/lib/debug')
+                         --with-separate-debug-dir=/usr/lib/debug \
+                         %s \
+                         --disable-nls \
+                         --disable-werror' % (get.HOST(), linker, multilib))
+                         # --with-pic \
+                         #--enable-targets="i386-linux" \
 
 def build():
     autotools.make("all")
@@ -56,7 +54,7 @@ def install():
     autotools.make('CFLAGS="-fPIC %s" -C libiberty' % get.CFLAGS())
 
     autotools.make("-C bfd clean")
-    autotools.make('CFLAGS="-fPIC -fvisibility=hidden %s" -C bfd' % get.CFLAGS())
+    autotools.make('CFLAGS="-fPIC %s" -C bfd' % get.CFLAGS())
 
     pisitools.insinto("/usr/lib", "bfd/libbfd.a")
     pisitools.insinto("/usr/lib", "libiberty/libiberty.a")
@@ -67,10 +65,10 @@ def install():
 
     # Prevent programs to link against libbfd and libopcodes dynamically,
     # they are changing far too often
-    #pisitools.remove("/usr/lib/libopcodes.so")
-    #pisitools.remove("/usr/lib/libbfd.so")
+    pisitools.remove("/usr/lib/libopcodes.so")
+    pisitools.remove("/usr/lib/libbfd.so")
 
     # Remove libtool files, which reference the .so libs
-    #pisitools.remove("/usr/lib/libopcodes.la")
-    #pisitools.remove("/usr/lib/libbfd.la")
+    pisitools.remove("/usr/lib/libopcodes.la")
+    pisitools.remove("/usr/lib/libbfd.la")
 

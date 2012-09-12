@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/automake/files
+END
+automake-1.12.2-aclocal7-test-fix.diff
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/automake/files/automake-1.12.2-aclocal7-test-fix.diff
+END
+do-not-generate-pyo-install-script.patch
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/pardus/!svn/ver/1387/playground/COMMON/system/devel/automake/files/do-not-generate-pyo-install-script.patch
+END

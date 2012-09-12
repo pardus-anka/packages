@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files
+END
+fix-anonymous-ftp-login.patch
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files/fix-anonymous-ftp-login.patch
+END

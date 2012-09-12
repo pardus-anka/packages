@@ -1,0 +1,25 @@
+--- configure.in	2011-04-06 21:48:00.000000000 +0300
++++ configure.in.old	2011-04-06 21:53:03.000000000 +0300
+@@ -2743,7 +2743,7 @@ 
+  initgroups kill killpg lchmod lchown lstat mkfifo mknod mktime \
+  mremap nice pathconf pause plock poll pthread_init \
+  putenv readlink realpath \
+- select sem_open sem_timedwait sem_getvalue sem_unlink setegid seteuid \
++ select setegid seteuid \
+  setgid \
+  setlocale setregid setreuid setsid setpgid setpgrp setuid setvbuf snprintf \
+  setlocale setregid setreuid setresuid setresgid \
+@@ -2752,6 +2752,13 @@ 
+  sysconf tcgetpgrp tcsetpgrp tempnam timegm times tmpfile tmpnam tmpnam_r \
+  truncate uname unsetenv utimes waitpid wait3 wait4 wcscoll _getpty)
+ 
++# Explicitly define them, because build bots may have broken
++# runtime support for semaphores
++AC_DEFINE(HAVE_SEM_OPEN)
++AC_DEFINE(HAVE_SEM_TIMEDWAIT)
++AC_DEFINE(HAVE_SEM_GETVALUE)
++AC_DEFINE(HAVE_SEM_UNLINK)
++
+ # For some functions, having a definition is not sufficient, since
+ # we want to take their address.
+ AC_MSG_CHECKING(for chroot)

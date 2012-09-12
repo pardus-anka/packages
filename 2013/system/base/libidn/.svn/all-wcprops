@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/pardus/!svn/ver/304/playground/badibere/system/base/libidn
+END
+translations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/pardus/!svn/ver/304/playground/badibere/system/base/libidn/translations.xml
+END
+actions.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/pardus/!svn/ver/304/playground/badibere/system/base/libidn/actions.py
+END
+pspec.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/pardus/!svn/ver/304/playground/badibere/system/base/libidn/pspec.xml
+END

@@ -10,8 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-nls \
-                         --enable-changeword")
+    autotools.configure("--enable-changeword")
 
 def build():
     autotools.make()

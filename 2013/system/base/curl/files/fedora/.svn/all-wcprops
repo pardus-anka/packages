@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files/fedora
+END
+0104-curl-7.19.7-localhost6.patch
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files/fedora/0104-curl-7.19.7-localhost6.patch
+END
+0106-curl-7.21.0-libssh2-valgrind.patch
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files/fedora/0106-curl-7.21.0-libssh2-valgrind.patch
+END
+0102-curl-7.21.2-debug.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/pardus/!svn/ver/1234/playground/COMMON/system/base/curl/files/fedora/0102-curl-7.21.2-debug.patch
+END

@@ -40,12 +40,12 @@
     </Package>
 
     <History>
-       <Update release="19">
-            <Date>2012-07-13</Date>
+        <Update release="19">
+            <Date>2012-09-05</Date>
             <Version>5.0.5</Version>
-            <Comment>New toolchain</Comment>
-            <Name>Serdar Soytetir</Name>
-            <Email>tulliana@gmail.com</Email>
+            <Comment>Version Bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
         </Update>
         <Update release="18">
             <Date>2010-10-11</Date>

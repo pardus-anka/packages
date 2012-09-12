@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files
+END
+python-2.7rc1-socketmodule-constants2.patch
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.7rc1-socketmodule-constants2.patch
+END
+sqlite-encoding.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/sqlite-encoding.patch
+END
+04python
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/04python
+END
+idle.desktop
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/idle.desktop
+END
+trfix_emaillib.patch
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/trfix_emaillib.patch
+END
+python-2.7.1-skip-shm-test.patch
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/pardus/!svn/ver/1679/playground/badibere/system/base/python/files/python-2.7.1-skip-shm-test.patch
+END
+python-2.7-binutils-no-dep.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.7-binutils-no-dep.patch
+END
+python-2.7-revised-linkage.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.7-revised-linkage.patch
+END
+bz2-multiple-stream-support-issue1625.patch
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/bz2-multiple-stream-support-issue1625.patch
+END
+python-2.6-rpath.patch
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.6-rpath.patch
+END
+pythonstart
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/pythonstart
+END
+add-pardus-to-search-path.patch
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/add-pardus-to-search-path.patch
+END
+python-2.7rc1-socketmodule-constants.patch
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.7rc1-socketmodule-constants.patch
+END
+pardus_platform.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/pardus_platform.patch
+END
+python-2.5.1-plural-fix.patch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.5.1-plural-fix.patch
+END
+python-logo.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-logo.png
+END
+no-pyc.patch
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/pardus/!svn/ver/1679/playground/badibere/system/base/python/files/no-pyc.patch
+END
+default-utf8.patch
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/default-utf8.patch
+END
+python-2.7rc1-statvfs-f_flag-constants.patch
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.7rc1-statvfs-f_flag-constants.patch
+END
+Python-2.7.2-no-local-incpath.patch
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/pardus/!svn/ver/1679/playground/badibere/system/base/python/files/Python-2.7.2-no-local-incpath.patch
+END
+python-2.5.1-codec-ascii-tolower.patch
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/python-2.5.1-codec-ascii-tolower.patch
+END
+python-2.7.3-upstream-pypirc-secure.patch
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/pardus/!svn/ver/1679/playground/badibere/system/base/python/files/python-2.7.3-upstream-pypirc-secure.patch
+END
+disable-egginfo.patch
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/304/playground/badibere/system/base/python/files/disable-egginfo.patch
+END
