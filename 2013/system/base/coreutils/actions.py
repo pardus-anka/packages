@@ -31,7 +31,8 @@ def setup():
     # Fedora also installs su and hostname
     autotools.configure("--enable-largefile \
                          --enable-install-program=arch \
-                         --enable-no-install-program=faillog,hostname,login,lastlog,uptime")
+                         --enable-no-install-program=faillog,hostname,login,lastlog,uptime \
+                         --libexecdir=/usr/lib")
 
 def build():
     autotools.make("LDFLAGS=%s" % get.LDFLAGS())
@@ -44,7 +45,8 @@ def check():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    autotools.install("mandir=%s/%s" % (get.installDIR(), get.manDIR()))
+    autotools.make("mandir=%s/%s install-man" % (get.installDIR(), get.manDIR()))
+    #~ autotools.install("mandir=%s/%s" % (get.installDIR(), get.manDIR()))
 
     # Use dircolors from the package
     pisitools.insinto("/etc", "src/dircolors.hin", "DIR_COLORS")

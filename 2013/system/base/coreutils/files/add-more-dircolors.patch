@@ -5,29 +5,31 @@ Index: coreutils-8.7/src/dircolors.hin
 @@ -1,12 +1,19 @@
 -# Configuration file for dircolors, a utility to help you set the
 -# LS_COLORS environment variable used by GNU ls with the --color option.
--
--# Copyright (C) 1996, 1999-2010 Free Software Foundation, Inc.
--# Copying and distribution of this file, with or without modification,
--# are permitted provided the copyright notice and this notice are preserved.
--
--# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
--# slackware version of dircolors) are recognized but ignored.
 +# Configuration file for the color ls utility
 +# Synchronized with coreutils 8.5 dircolors
 +# This file goes in the /etc directory, and must be world readable.
 +# You can copy this file to .dir_colors in your $HOME directory to override
 +# the system defaults.
-+
+ 
+-# Copyright (C) 1996-2012 Free Software Foundation, Inc.
+-# Copying and distribution of this file, with or without modification,
+-# are permitted provided the copyright notice and this notice are preserved.
 +# COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 +# pipes. 'all' adds color characters to all output. 'none' shuts colorization
 +# off.
 +COLOR tty
-+
+ 
+-# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+-# slackware version of dircolors) are recognized but ignored.
 +# Extra command line options for ls go here.
 +# Basically these ones are:
 +#  -F = show '/' for dirs, '*' for executables, etc.
 +#  -T 0 = don't trust tab spacing when formatting ls output.
 +OPTIONS -F -T 0
+ 
+ # Below, there should be one TERM entry for each termtype that is colorizable
+ TERM Eterm
+
  
  # Below, there should be one TERM entry for each termtype that is colorizable
  TERM Eterm
