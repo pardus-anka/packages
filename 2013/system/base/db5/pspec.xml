@@ -17,6 +17,9 @@
 
     <Package>
         <Name>db5</Name>
+        <Replaces>
+           <Package>db4</Package>
+        <Replaces>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
@@ -29,7 +32,7 @@
         <PartOf>system.devel</PartOf>
         <Summary>Development files for db4</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">db4</Dependency>
+            <Dependency release="current">db5</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -39,9 +42,9 @@
     <Package>
         <Name>db5-docs</Name>
         <PartOf>system.doc</PartOf>
-        <Summary>Documentation for db4</Summary>
+        <Summary>Documentation for db5</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">db4</Dependency>
+            <Dependency release="current">db5</Dependency>
         </RuntimeDependencies>
         <Replaces>
             <Package>db4-doc</Package>
