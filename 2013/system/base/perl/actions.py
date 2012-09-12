@@ -39,7 +39,7 @@ def setup():
                       -Duseshrplib \
                       -Dman1ext=1 \
                       -Dman3ext=3pm \
-                      -Dcf_by=Pardus \
+                      -Dcf_by="Pardus ANKA" \
                       -Ud_csh \
                       -Di_ndbm \
                       -Di_gdbm \
@@ -62,6 +62,9 @@ def build():
     autotools.make()
 
 def check():
+    #symlink libperl.so.x.y.z to libperl.so
+    #so we can pass /lib/ExtUtils/t/Embed.t test
+    shelltools.sym("libperl.so.%s" % get.srcVERSION(),"libperl.so")
     autotools.make("-j1 test")
 
 def install():
@@ -74,10 +77,11 @@ def install():
     pisitools.dosym("/usr/bin/perl%s" % get.srcVERSION(), "/usr/bin/perl")
 
     # Perl5 library
+    # NEEDS MODIFICATION FOR NEW VERSION
     pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so")
     pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so.5")
-    pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so.5.14")
-    pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so.5.14.1")
+    pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so.5.16")
+    pisitools.dosym("/usr/lib/perl5/%s/%s-linux-thread-multi/CORE/libperl.so.%s" % (get.srcVERSION(), get.ARCH(), get.srcVERSION()), "/usr/lib/libperl.so.5.16.1")
 
     # Docs
     pisitools.dodir("/usr/share/doc/%s/html" % get.srcNAME())

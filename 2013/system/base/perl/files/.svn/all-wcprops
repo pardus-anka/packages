@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files
+END
+Turkish-test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/Turkish-test.pl
+END
+bump_Compress-Raw-Bzip2_module_to_2.031.patch
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/bump_Compress-Raw-Bzip2_module_to_2.031.patch
+END
+perl-5.12.2-h2ph.patch
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.2-h2ph.patch
+END
+perl-5.12.1-skip-compat-test.patch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-skip-compat-test.patch
+END
+perl-fix_dbmclose_call.patch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-fix_dbmclose_call.patch
+END
+perl-5.12.1-fix_thread_leak.patch
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-fix_thread_leak.patch
+END
+CVE-2011-1487.patch
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/CVE-2011-1487.patch
+END
+perl-regexp-refoverflow.diff
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-regexp-refoverflow.diff
+END
+CVE-2010-4777.patch
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/CVE-2010-4777.patch
+END
+perl-5.12.1-nroff.diff
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-nroff.diff
+END
+Turkish.pm
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/Turkish.pm
+END
+do_not_create_packlist_in_Module_Build.patch
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/do_not_create_packlist_in_Module_Build.patch
+END
+perl-5.12.1-gracefull-net-ftp.diff
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-gracefull-net-ftp.diff
+END
+disable-zlib-bundling.diff
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/disable-zlib-bundling.diff
+END
+perl-5.12.1-netcmdutf8.diff
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-netcmdutf8.diff
+END
+perl-5.12.1-disable-syslog-test.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.12.1-disable-syslog-test.patch
+END
+deprecate-with-pisi.diff
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/deprecate-with-pisi.diff
+END
+perl-5.8.5-prelink-lpthread.patch
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/perl-5.8.5-prelink-lpthread.patch
+END
+pod-disable-locale.patch
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pardus/!svn/ver/125362/tags/2011-EOL/system/base/perl/files/pod-disable-locale.patch
+END

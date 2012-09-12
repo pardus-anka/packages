@@ -16,10 +16,24 @@
         <Archive sha1sum="60f2b81e3ffaff3030962ccbc02cd04f91f69ad5" type="targz">http://www.cpan.org/src/5.0/perl-5.16.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>groff</Dependency>
-            <Dependency>db4-devel</Dependency>
+            <Dependency>db5-devel</Dependency>
             <Dependency>gdbm-devel</Dependency>
             <Dependency>bzip2</Dependency>
         </BuildDependencies>
+        <Patches>
+          <!-- disable for Sandbox -->
+          <Patch level="1">perl-5.12.1-skip-compat-test.patch</Patch>
+
+          <Patch level="1">perl-USE_MM_LD_RUN_PATH.patch</Patch>
+          <Patch level="1">perl-5.14.2-find2perl-transtate-question-mark-properly.patch</Patch>
+          <Patch level="1">perl-5.16.0-fix-broken-atof.patch</Patch>
+          <Patch level="1">perl-5.16.1-perl-111610-Trouble-with-XS-APItest-t-clone-with-sta.patch</Patch>
+          <Patch level="1">perl-5.16.1-PATCH-perl-114220-h-not-equiv-to-h.patch</Patch>
+          <Patch level="1">perl-5.16.1-RT-113730-should-be-cleared-on-do-IO-error.patch</Patch>
+          <Patch level="1">perl-5.16.1-perl-113980-pp_syscall-I32-retval-truncates-the-retu.patch</Patch>
+          <Patch level="1">disable-zlib-bundling.diff</Patch>
+          <Patch level="1">perl-5.12.1-gracefull-net-ftp.diff</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -42,7 +56,7 @@
     <Package>
         <Name>perl</Name>
         <RuntimeDependencies>
-            <Dependency>db4</Dependency>
+            <Dependency>db5</Dependency>
             <Dependency>bzip2</Dependency>
             <Dependency versionFrom="1.8.3">gdbm</Dependency>
         </RuntimeDependencies>
@@ -89,7 +103,7 @@
         </Files>
         <AdditionalFiles>
             <!-- FIXME: Update perl version in target path  when Perl version changes! -->
-            <AdditionalFile owner="root" permission="0644" target="/usr/lib/perl5/vendor_perl/5.14.1/Turkish.pm">Turkish.pm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/lib/perl5/vendor_perl/5.16.1/Turkish.pm">Turkish.pm</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
