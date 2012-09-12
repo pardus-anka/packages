@@ -18,10 +18,12 @@
             <Dependency>zlib</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--<Patch level="1">python.diff</Patch>-->
-            <!-- Fix for OO.org does not print ps files created on tuesday bug, ubuntu#255161 and ubuntu#248619 -->
-            <!--<Patch level="1">220-magic-update-erlang.patch</Patch>-->
-            <Patch level="1">duplicate_softquad.patch</Patch>
+            <Patch level="1">file-5.10-sticky-bit.patch</Patch>
+            <Patch level="1">file-5.10-strength.patch</Patch>
+            <Patch level="1">file-5.11-compress.patch</Patch>
+            <Patch level="1">file-5.11-magicmgc-home.patch</Patch>
+            <Patch level="1">file-localmagic.patch</Patch>
+            <Patch level="1">file-python-func.patch</Patch>
         </Patches>
     </Source>
 
