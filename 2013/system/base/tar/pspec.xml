@@ -26,19 +26,16 @@
             <!-- Fedora patches -->
             <Patch level="1">fedora/tar-1.14-loneZeroWarning.patch</Patch>
             <Patch level="1">fedora/tar-1.15.1-vfatTruncate.patch</Patch>
-            <!--<Patch level="1">fedora/tar-1.22-atime-rofs.patch</Patch>-->
-            <Patch level="1">fedora/tar-1.23-oldarchive.patch</Patch>
             <Patch level="1">fedora/tar-1.17-wildcards.patch</Patch>
-            <!--<Patch level="1">fedora/tar-1.25-listedincremental.patch</Patch>-->
-            <!--<Patch level="1">fedora/tar-1.25-sparse-names.patch</Patch> -->
+            <Patch level="1">fedora/tar-1.22-atime-rofs.patch</Patch>
+            <Patch level="1">fedora/tar-1.23-oldarchive.patch</Patch>
             <Patch level="1">fedora/tar-sigpipe.patch</Patch>
+            <Patch level="1">fedora/tar-1.24-openat-partial-revert.patch</Patch>
+            <Patch level="1">fedora/tar-1.26-update-with-change-directory.patch</Patch>
+            <Patch level="1">fedora/tar-1.26-stdio.in.patch</Patch>
 
             <!-- SuSE patches -->
             <Patch level="1">tar-disable_languages.patch</Patch>
-
-            <!-- Enable to refresh man page, copy it under files
-            <Patch level="1">tar-manpage.patch</Patch>
-            -->
         </Patches>
     </Source>
 
