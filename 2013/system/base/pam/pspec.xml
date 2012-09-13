@@ -27,14 +27,15 @@
             <!-- Sandbox -->
             <Patch level="1">Linux-PAM-1.1.6-destdir.patch</Patch>
             <!-- Fix unix build -->
-            <Patch level="1">pam-1.1.5-unix-build.patch</Patch>
+            <Patch level="1">pam-1.1.5-unix-build.patch</Patch>  
             <Patch level="1">no-lib64.patch</Patch>
+            <!-- Fedora patch -->        
             <Patch level="1">fedora/pam-1.1.6-std-noclose.patch</Patch>
             <Patch level="1">fedora/pam-1.1.5-limits-user.patch</Patch>
             <Patch level="1">fedora/pam-1.1.5-unix-no-fallback.patch</Patch>
             <Patch level="1">fedora/pam-1.1.6-autoupdate.patch</Patch>
             <Patch level="1">fedora/pam-1.1.6-full-relro.patch</Patch>    
-            <Patch level="1">fedora/pam-1.1.6-noflex.patch</Patch>     
+            <Patch level="1">fedora/pam-1.1.6-noflex.patch</Patch>    
         </Patches>
     </Source>
 
