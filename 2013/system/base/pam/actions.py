@@ -42,7 +42,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     # FIXME: Check whether /var is empty!
-    pisitools.removeDir("/var")
+    #~ pisitools.removeDir("/var")
 
     pisitools.removeDir("/usr/share/doc/Linux-PAM/")
 

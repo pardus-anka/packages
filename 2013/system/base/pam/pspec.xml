@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Pluggable Authentication Modules</Summary>
         <Description>PAM (Pluggable Authentication Modules) is a system security tool that allows system administrators to set authentication policy without having to recompile programs that handle authentication.</Description>
-        <Archive sha1sum="662a769f66708c3b9b5a41d62802ed69bf489e09" type="tarbz2">https://fedorahosted.org/releases/l/i/linux-pam/Linux-PAM-1.1.5.tar.bz2</Archive>
+        <Archive sha1sum="7a95061499bac787c16bb7f7083a139f3abc15d2" type="tarbz2">http://www.linux-pam.org/library/Linux-PAM-1.1.6.tar.bz2</Archive>
         <AdditionalFiles>
             <AdditionalFile target="dlopen.sh" permission="0755">fedora/dlopen.sh</AdditionalFile>
             <AdditionalFile target="dlopen-test.sh" permission="0755">fedora/dlopen-test.sh</AdditionalFile>
@@ -24,12 +24,12 @@
             <Dependency>audit-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <Patch level="1">fedora/pam-1.0.91-std-noclose.patch</Patch>
-            <Patch level="1">fedora/pam-1.1.0-notally.patch</Patch>
-            <Patch level="1">no-lib64.patch</Patch>
+            <!-- Sandbox -->
+            <Patch level="1">Linux-PAM-1.1.6-destdir.patch</Patch>
+            <!-- Fix unix build -->
+            <Patch level="1">pam-1.1.5-unix-build.patch</Patch>
 
-            <!-- Fix Turkish translations 
-            <Patch level="1">tr.patch</Patch>-->
+            <Patch level="1">no-lib64.patch</Patch>
         </Patches>
     </Source>
 
@@ -72,6 +72,13 @@
     </Package>
 
     <History>
+        <Update release="33">
+            <Date>2012-09-13</Date>
+            <Version>1.1.6</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Erdem Artan</Name>
+            <Email>erdem@pardus-linux.org</Email>
+        </Update>
         <Update release="32">
             <Date>2012-08-23</Date>
             <Version>1.1.5</Version>
