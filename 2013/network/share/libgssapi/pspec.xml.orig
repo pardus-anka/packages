@@ -1,0 +1,40 @@
+<PISI>
+    <Source>
+        <Name>libgssapi</Name>
+        <Homepage>http://www.citi.umich.edu/projects/nfsv4/linux/libgssapi/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>network.share</PartOf>
+        <IsA>library</IsA>
+        <Summary>This library exports a gssapi interface</Summary>
+        <Description>This library exports a gssapi interface, but doesn't implement any gssapi mechanisms itself; instead it calls gssapi routines in other libraries, depending on the mechanism.</Description>
+        <BuildDependencies>
+            <Dependency>libgssglue-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="393ca1984ac01bb97682356316f6cbe23363b008" type="targz">http://downloads.openwrt.org/sources/libgssapi-0.11.tar.gz</Archive>
+        <Patches/>
+    </Source>
+    <Package>
+        <Name>libgssapi</Name>
+        <RuntimeDependencies>
+            <Dependency>libgssglue</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library" permanent="0">/usr/lib/</Path>
+            <Path fileType="doc" permanent="0">/usr/share/doc/libgssapi/</Path>
+	    <Path fileType="header" permanent="0">/usr/include/gssglue/gssapi</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2012-09-05</Date>
+            <Version>0.11</Version>
+            <Comment>First Release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Update>
+    </History>
+</PISI>

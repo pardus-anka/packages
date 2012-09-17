@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libgssapi</Name>
+        <Summary xml:lang="en">This library exports a gssapi interface</Summary>
+        <Description xml:lang="en">This library exports a gssapi interface, but doesn't implement any gssapi mechanisms itself; instead it calls gssapi routines in other libraries, depending on the mechanism.</Description>
+    </Source>
+
+    <!--<Package>
+        <Name>libgssapi-devel</Name>
+	<Summary xml:lang="tr">libgssapi için geliştirme dosyaları.</Summary>
+    </Package>-->
+</PISI>
