@@ -1,0 +1,52 @@
+<PISI>
+    <Source>
+        <Name>librpcsecgss</Name>
+        <Homepage>http://www.citi.umich.edu/projects/nfsv4/linux/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>network.share</PartOf>
+        <IsA>library</IsA>
+        <Summary>Library for RPCSECGSS support</Summary>
+        <Description>librpcsecgss implements rpcsec_gss (RFC 2203) which allows secure rpc communication using gss-api security mechanisms.</Description>
+        <Archive sha1sum="94fa212007c874af9a4d56dd85a9d1130923768a" type="targz">http://downloads.openwrt.org/sources/librpcsecgss-0.14.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgssglue-devel</Dependency>
+            <Dependency>libgssapi-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>librpcsecgss</Name>
+        <RuntimeDependencies>
+            <Dependency>libgssglue</Dependency>
+            <Dependency>libgssapi</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/librpcsecgss</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>librpcsecgss-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>librpcsecgss</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/rpcsecgss/rpc/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2012-09-05</Date>
+            <Version>0.19.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Update>
+    </History>
+</PISI>
